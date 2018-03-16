@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"><title>today-headline</title><link href=./static/css/app.f46fb9a50a398e1d14fd0e6c7a118bc2.css rel=stylesheet></head><body><div id=app></div><script>(function(doc,win){
+      var docEl=doc.documentElement;
+      if ("orientationchange" in window) {
+        var resizeEvt="orientationchange";
+      } else{
+        var resizeEvt="resize";
+      };
+
+      var recalc=function(){
+        var clientWidth=docEl.clientWidth;
+
+        if(!clientWidth) return;
+        if(clientWidth>=640){
+          docEl.style.fontSize="100px";
+        }else{
+          docEl.style.fontSize=100*(clientWidth/640)+"px";
+        };
+      }
+      if(!doc.addEventListener){
+        return;
+      }
+      win.addEventListener(resizeEvt,recalc.false);
+      doc.addEventListener("DOMContentLoaded",recalc,false)
+    })(document,window);
+
+    //横竖屏时
+    window.addEventListener("orientationchange", function() {
+      window.location.reload();
+    }, false);</script><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.3fd30a6c5d70055afd58.js></script><script type=text/javascript src=./static/js/app.ae4a6524c586bc5f9d92.js></script></body></html>
